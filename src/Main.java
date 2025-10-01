@@ -2,6 +2,12 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-
+        String code = "  0;JMP  //unconditional jump  ";
+        if(code.contains("/")) {
+            code = code.substring(0, code.indexOf('/')).trim();
+        } else{
+            code = code.trim();
+        }
+        System.out.println(code);
     }
 }
